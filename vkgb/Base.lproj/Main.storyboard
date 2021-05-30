@@ -49,6 +49,9 @@
                                         <rect key="frame" x="8" y="727" width="358" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="Войти"/>
+                                        <connections>
+                                            <action selector="performLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sIc-mG-QNU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -87,6 +90,13 @@
                             <constraint firstItem="6PW-dT-uHu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WU0-mG-Xco"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="frr-qd-nPM" id="1zV-WN-GZ2"/>
+                        <outlet property="loginImageView" destination="ZWR-HT-uBe" id="34b-Px-BVu"/>
+                        <outlet property="passwordInput" destination="FBK-nm-nZp" id="lfm-sP-7DM"/>
+                        <outlet property="phoneInput" destination="p3H-kO-GA1" id="zTI-Gl-fHA"/>
+                        <outlet property="scrollView" destination="6PW-dT-uHu" id="Dw9-Sv-L1Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
