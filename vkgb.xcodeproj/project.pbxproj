@@ -16,6 +16,7 @@
 		CA1C0A2C266364E7000D95B8 /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C0A2B266364E7000D95B8 /* LoginFormController.swift */; };
 		CA68B5F5266BD9C000BE0DE7 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA68B5F4266BD9C000BE0DE7 /* FriendsTableViewController.swift */; };
 		CA68B5F7266BDE0800BE0DE7 /* FriendsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA68B5F6266BDE0800BE0DE7 /* FriendsCollectionViewController.swift */; };
+		CAF07183266BFD43006B8BD3 /* FriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF07182266BFD43006B8BD3 /* FriendsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CA1C0A2B266364E7000D95B8 /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
 		CA68B5F4266BD9C000BE0DE7 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 		CA68B5F6266BDE0800BE0DE7 /* FriendsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewController.swift; sourceTree = "<group>"; };
+		CAF07182266BFD43006B8BD3 /* FriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				CA68B5F4266BD9C000BE0DE7 /* FriendsTableViewController.swift */,
 				CA68B5F6266BDE0800BE0DE7 /* FriendsCollectionViewController.swift */,
+				CAF07182266BFD43006B8BD3 /* FriendsCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			files = (
 				CA68B5F7266BDE0800BE0DE7 /* FriendsCollectionViewController.swift in Sources */,
 				CA1C0A1C2663643A000D95B8 /* ViewController.swift in Sources */,
+				CAF07183266BFD43006B8BD3 /* FriendsCollectionViewCell.swift in Sources */,
 				CA1C0A2C266364E7000D95B8 /* LoginFormController.swift in Sources */,
 				CA1C0A182663643A000D95B8 /* AppDelegate.swift in Sources */,
 				CA1C0A1A2663643A000D95B8 /* SceneDelegate.swift in Sources */,
