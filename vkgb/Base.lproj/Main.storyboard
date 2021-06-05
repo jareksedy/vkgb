@@ -48,7 +48,7 @@
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
         </scene>
-        <!--Группы-->
+        <!--View Controller-->
         <scene sceneID="6kn-kT-0Z1">
             <objects>
                 <viewController id="Fug-RW-kO2" sceneMemberID="viewController">
@@ -58,13 +58,13 @@
                         <viewLayoutGuide key="safeArea" id="SuZ-SL-Naz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Группы" image="bolt.horizontal.circle" selectedImage="bolt.horizontal.circle.fill" catalog="system" id="cc8-JM-UbP"/>
+                    <navigationItem key="navigationItem" id="Tca-18-nYl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awe-xB-Fd6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1763" y="390"/>
+            <point key="canvasLocation" x="2630" y="445"/>
         </scene>
-        <!--Друзья-->
+        <!--View Controller-->
         <scene sceneID="SuQ-Ap-q3Z">
             <objects>
                 <viewController id="1B8-A0-aqe" sceneMemberID="viewController">
@@ -74,11 +74,11 @@
                         <viewLayoutGuide key="safeArea" id="9U5-9Q-tao"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Друзья" image="person.2.circle" catalog="system" selectedImage="person.2.circle.fill" id="l44-yN-eiz"/>
+                    <navigationItem key="navigationItem" id="cQZ-lM-eIf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JzR-PE-9JI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1763" y="-216"/>
+            <point key="canvasLocation" x="2630" y="-216"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="MMU-mB-bux">
@@ -91,17 +91,55 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="1B8-A0-aqe" kind="relationship" relationship="viewControllers" id="m7I-T9-c8L"/>
-                        <segue destination="Fug-RW-kO2" kind="relationship" relationship="viewControllers" id="TtA-Ng-xwN"/>
+                        <segue destination="QpI-Ea-Fmj" kind="relationship" relationship="viewControllers" id="m7I-T9-c8L"/>
+                        <segue destination="C8E-Km-zEz" kind="relationship" relationship="viewControllers" id="TtA-Ng-xwN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kyd-36-ga6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="871" y="87"/>
         </scene>
+        <!--Друзья-->
+        <scene sceneID="PwG-FX-zbQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QpI-Ea-Fmj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Друзья" image="person.2.circle" catalog="system" selectedImage="person.2.circle.fill" id="l44-yN-eiz"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MZX-RB-LR7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1B8-A0-aqe" kind="relationship" relationship="rootViewController" id="tDw-md-kNg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jIr-wf-N1B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1762.3188405797102" y="-216.29464285714286"/>
+        </scene>
+        <!--Группы-->
+        <scene sceneID="vnM-hG-d8h">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C8E-Km-zEz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Группы" image="bolt.horizontal.circle" catalog="system" selectedImage="bolt.horizontal.circle.fill" id="cc8-JM-UbP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZZ4-Ve-JTc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fug-RW-kO2" kind="relationship" relationship="rootViewController" id="q6N-Vk-16f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r9z-j0-roG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1762" y="445"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="bolt.horizontal.circle" width="128" height="128"/>
+        <image name="bolt.horizontal.circle" catalog="system" width="128" height="121"/>
         <image name="bolt.horizontal.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.2.circle" catalog="system" width="128" height="121"/>
         <image name="person.2.circle.fill" catalog="system" width="128" height="121"/>
