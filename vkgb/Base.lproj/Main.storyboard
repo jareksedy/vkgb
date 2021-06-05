@@ -48,7 +48,7 @@
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
         </scene>
-        <!--Item 2-->
+        <!--Группы-->
         <scene sceneID="6kn-kT-0Z1">
             <objects>
                 <viewController id="Fug-RW-kO2" sceneMemberID="viewController">
@@ -58,13 +58,13 @@
                         <viewLayoutGuide key="safeArea" id="SuZ-SL-Naz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="cc8-JM-UbP"/>
+                    <tabBarItem key="tabBarItem" title="Группы" image="bolt.horizontal.circle" selectedImage="bolt.horizontal.circle.fill" catalog="system" id="cc8-JM-UbP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awe-xB-Fd6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1763" y="390"/>
         </scene>
-        <!--Item 1-->
+        <!--Друзья-->
         <scene sceneID="SuQ-Ap-q3Z">
             <objects>
                 <viewController id="1B8-A0-aqe" sceneMemberID="viewController">
@@ -74,7 +74,7 @@
                         <viewLayoutGuide key="safeArea" id="9U5-9Q-tao"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="l44-yN-eiz"/>
+                    <tabBarItem key="tabBarItem" title="Друзья" image="person.2.circle" catalog="system" selectedImage="person.2.circle.fill" id="l44-yN-eiz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JzR-PE-9JI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -101,6 +101,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bolt.horizontal.circle" width="128" height="128"/>
+        <image name="bolt.horizontal.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.2.circle" catalog="system" width="128" height="121"/>
+        <image name="person.2.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
