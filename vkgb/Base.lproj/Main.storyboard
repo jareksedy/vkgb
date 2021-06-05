@@ -48,7 +48,7 @@
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Группы-->
         <scene sceneID="6kn-kT-0Z1">
             <objects>
                 <viewController id="Fug-RW-kO2" sceneMemberID="viewController">
@@ -58,13 +58,13 @@
                         <viewLayoutGuide key="safeArea" id="SuZ-SL-Naz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Tca-18-nYl"/>
+                    <navigationItem key="navigationItem" title="Группы" id="Efm-iR-06E"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awe-xB-Fd6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2630" y="445"/>
         </scene>
-        <!--View Controller-->
+        <!--Друзья-->
         <scene sceneID="SuQ-Ap-q3Z">
             <objects>
                 <viewController id="1B8-A0-aqe" sceneMemberID="viewController">
@@ -74,7 +74,7 @@
                         <viewLayoutGuide key="safeArea" id="9U5-9Q-tao"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cQZ-lM-eIf"/>
+                    <navigationItem key="navigationItem" title="Друзья" id="fgn-7O-DO2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JzR-PE-9JI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
