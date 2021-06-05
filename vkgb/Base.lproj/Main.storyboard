@@ -50,20 +50,68 @@
             <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
         </scene>
         <!--Мои группы-->
-        <scene sceneID="6kn-kT-0Z1">
+        <scene sceneID="sWh-Rx-e3b">
             <objects>
-                <viewController id="Fug-RW-kO2" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jrl-Px-cOc">
+                <tableViewController id="GEc-xj-AcU" customClass="GroupTableViewController" customModule="vkgb" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GBG-dS-BWv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="SuZ-SL-Naz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Мои группы" id="Efm-iR-06E"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="awe-xB-Fd6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupCell" rowHeight="100" id="3eX-Mg-8Wg">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3eX-Mg-8Wg" id="ruQ-w8-mZm">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GEc-xj-AcU" id="ETN-kI-73C"/>
+                            <outlet property="delegate" destination="GEc-xj-AcU" id="R01-3L-LhQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Мои группы" id="l33-Al-qQU">
+                        <barButtonItem key="rightBarButtonItem" title="Все группы" id="CyO-vC-d3l">
+                            <connections>
+                                <segue destination="sbc-Gr-nhJ" kind="show" id="tcl-Sa-o1G"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8q7-Ai-dCF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2630" y="445"/>
+            <point key="canvasLocation" x="2628.985507246377" y="444.64285714285711"/>
+        </scene>
+        <!--Все группы-->
+        <scene sceneID="QYF-33-I2Q">
+            <objects>
+                <tableViewController id="sbc-Gr-nhJ" customClass="AllGroupsTableViewController" customModule="vkgb" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="evs-MW-FdU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupCell" rowHeight="100" id="PEc-dP-MA6">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PEc-dP-MA6" id="XOy-Vx-rg3">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sbc-Gr-nhJ" id="5Fl-Ed-2FI"/>
+                            <outlet property="delegate" destination="sbc-Gr-nhJ" id="UEs-vI-ouQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Все группы" id="lHm-Ys-uH8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="unC-Et-xbj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3479.7101449275365" y="444.64285714285711"/>
         </scene>
         <!--Мои друзья-->
         <scene sceneID="hNe-we-Zv8">
@@ -197,7 +245,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Fug-RW-kO2" kind="relationship" relationship="rootViewController" id="q6N-Vk-16f"/>
+                        <segue destination="GEc-xj-AcU" kind="relationship" relationship="rootViewController" id="59v-jl-EK7"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r9z-j0-roG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
