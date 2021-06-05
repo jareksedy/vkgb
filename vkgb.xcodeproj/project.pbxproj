@@ -14,7 +14,8 @@
 		CA1C0A212663643D000D95B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1C0A202663643D000D95B8 /* Assets.xcassets */; };
 		CA1C0A242663643D000D95B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA1C0A222663643D000D95B8 /* LaunchScreen.storyboard */; };
 		CA1C0A2C266364E7000D95B8 /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C0A2B266364E7000D95B8 /* LoginFormController.swift */; };
-		CA391083266B88B70070D4AE /* MyFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA391082266B88B70070D4AE /* MyFriendsViewController.swift */; };
+		CA68B5F5266BD9C000BE0DE7 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA68B5F4266BD9C000BE0DE7 /* FriendsTableViewController.swift */; };
+		CA68B5F7266BDE0800BE0DE7 /* FriendsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA68B5F6266BDE0800BE0DE7 /* FriendsCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 		CA1C0A232663643D000D95B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA1C0A252663643D000D95B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA1C0A2B266364E7000D95B8 /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
-		CA391082266B88B70070D4AE /* MyFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsViewController.swift; sourceTree = "<group>"; };
+		CA68B5F4266BD9C000BE0DE7 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		CA68B5F6266BDE0800BE0DE7 /* FriendsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,15 +78,16 @@
 		CA391080266B88720070D4AE /* MyFriends */ = {
 			isa = PBXGroup;
 			children = (
-				CA391081266B88980070D4AE /* Controller */,
+				CAEDA6E0266B9EFA009878E2 /* Controller */,
 			);
 			path = MyFriends;
 			sourceTree = "<group>";
 		};
-		CA391081266B88980070D4AE /* Controller */ = {
+		CAEDA6E0266B9EFA009878E2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CA391082266B88B70070D4AE /* MyFriendsViewController.swift */,
+				CA68B5F4266BD9C000BE0DE7 /* FriendsTableViewController.swift */,
+				CA68B5F6266BDE0800BE0DE7 /* FriendsCollectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -159,11 +162,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA391083266B88B70070D4AE /* MyFriendsViewController.swift in Sources */,
+				CA68B5F7266BDE0800BE0DE7 /* FriendsCollectionViewController.swift in Sources */,
 				CA1C0A1C2663643A000D95B8 /* ViewController.swift in Sources */,
 				CA1C0A2C266364E7000D95B8 /* LoginFormController.swift in Sources */,
 				CA1C0A182663643A000D95B8 /* AppDelegate.swift in Sources */,
 				CA1C0A1A2663643A000D95B8 /* SceneDelegate.swift in Sources */,
+				CA68B5F5266BD9C000BE0DE7 /* FriendsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
