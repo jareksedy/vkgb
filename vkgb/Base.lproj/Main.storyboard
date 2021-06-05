@@ -48,7 +48,7 @@
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
         </scene>
-        <!--Группы-->
+        <!--Мои группы-->
         <scene sceneID="6kn-kT-0Z1">
             <objects>
                 <viewController id="Fug-RW-kO2" sceneMemberID="viewController">
@@ -58,27 +58,59 @@
                         <viewLayoutGuide key="safeArea" id="SuZ-SL-Naz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Группы" id="Efm-iR-06E"/>
+                    <navigationItem key="navigationItem" title="Мои группы" id="Efm-iR-06E"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awe-xB-Fd6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2630" y="445"/>
         </scene>
-        <!--Друзья-->
-        <scene sceneID="SuQ-Ap-q3Z">
+        <!--Мои друзья-->
+        <scene sceneID="hNe-we-Zv8">
             <objects>
-                <viewController id="1B8-A0-aqe" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="r0W-D5-6vR">
+                <tableViewController id="yoZ-JX-5tP" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lPA-Z2-jad">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="9U5-9Q-tao"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="Bq0-1w-2Q8">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bq0-1w-2Q8" id="dEv-XY-rGz">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="hmh-dK-dNT" kind="show" id="QYb-Ba-Li6"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yoZ-JX-5tP" id="te5-9s-sWu"/>
+                            <outlet property="delegate" destination="yoZ-JX-5tP" id="pzE-be-Sbh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Мои друзья" id="9KA-Bl-C7N"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5At-qX-mex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2628.985507246377" y="-216.29464285714286"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="L8Y-C9-chr">
+            <objects>
+                <viewController id="hmh-dK-dNT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vgI-KS-WaN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="9s7-5P-SmP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Друзья" id="fgn-7O-DO2"/>
+                    <navigationItem key="navigationItem" id="JTu-pp-gKU"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JzR-PE-9JI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RsC-Ng-1oB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2630" y="-216"/>
+            <point key="canvasLocation" x="3409" y="-216"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="MMU-mB-bux">
@@ -111,7 +143,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="1B8-A0-aqe" kind="relationship" relationship="rootViewController" id="tDw-md-kNg"/>
+                        <segue destination="yoZ-JX-5tP" kind="relationship" relationship="rootViewController" id="xzZ-Kx-mWa"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIr-wf-N1B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
