@@ -8,6 +8,9 @@
 import UIKit
 
 class GroupTableViewController: UITableViewController {
+    
+    //var groups = GroupDataStorage.groups
+    var myGroups: [Group] = [GroupDataStorage.groups[1], GroupDataStorage.groups[3], GroupDataStorage.groups[5]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +25,20 @@ class GroupTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        /*
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath)
 
         cell.textLabel?.text = "Чёткие приколы 18+"
+
+        return cell
+         */
+        guard
+            let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell") as? GroupTableViewCell
+        else {
+            return UITableViewCell()
+        }
+        
+        cell.configure(group: myGroups[indexPath.row])
 
         return cell
     }
@@ -36,7 +50,7 @@ class GroupTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return myGroups.count
     }
 
     /*

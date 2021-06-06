@@ -8,6 +8,8 @@
 import UIKit
 
 class AllGroupsTableViewController: UITableViewController {
+    
+    var groups = GroupDataStorage.groups
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +24,13 @@ class AllGroupsTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath)
-
-        let groupNames: [String] = ["Чёткие приколы 18+", "Смешные котики", "ЁПТ! 18+", "Фильмы и сериалы", "Палата №6", "Лайфхаки на все случаи жизни", "Психология", "Музыка", "Трэш"]
+        guard
+            let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell") as? AllGroupsTableViewCell
+        else {
+            return UITableViewCell()
+        }
         
-        cell.textLabel?.text = groupNames[Int.random(in: 0...groupNames.count-1)]
+        cell.configure(group: groups[indexPath.row])
 
         return cell
     }
@@ -38,7 +42,7 @@ class AllGroupsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return groups.count
     }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
