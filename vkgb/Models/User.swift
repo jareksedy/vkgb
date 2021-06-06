@@ -11,12 +11,6 @@ struct User {
     let name: String
     let lastname: String
     let imageName: String?
-    
-    init(name: String, lastname: String, imageName: String? = nil) {
-        self.name = name
-        self.lastname = lastname
-        self.imageName = imageName
-    }
 }
 
 struct UserDataStorage {
