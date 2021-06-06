@@ -18,7 +18,7 @@ struct UserDataStorage {
         User(name: "Мартин", lastname: "Хайдеггер", imageName: "Heidegger"),
         User(name: "Фридрих", lastname: "Ницше", imageName: "Nietzsche"),
         User(name: "Артур", lastname: "Шопенгауэр", imageName: "Schopenhauer"),
-        User(name: "Федор", lastname: "Достоевский", imageName: "Dostoyevsky"),
+        User(name: "Фёдор", lastname: "Достоевский", imageName: "Dostoyevsky"),
         User(name: "Иммануил", lastname: "Кант", imageName: "Kant"),
         User(name: "Альбер", lastname: "Камю", imageName: "Camus"),
         User(name: "Сёрен", lastname: "Кьеркегор", imageName: "Kierkegaard"),
