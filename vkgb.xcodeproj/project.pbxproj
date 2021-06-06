@@ -80,8 +80,8 @@
 				CA1C0A202663643D000D95B8 /* Assets.xcassets */,
 				CA1C0A222663643D000D95B8 /* LaunchScreen.storyboard */,
 				CA1C0A252663643D000D95B8 /* Info.plist */,
-				CA5A8D6C266CE76D00D7E3DB /* Model */,
-				CA5A8D6B266CE76200D7E3DB /* Controller */,
+				CA5A8D6C266CE76D00D7E3DB /* Models */,
+				CA5A8D6B266CE76200D7E3DB /* Controllers */,
 			);
 			path = vkgb;
 			sourceTree = "<group>";
@@ -94,22 +94,22 @@
 			path = MyFriends;
 			sourceTree = "<group>";
 		};
-		CA5A8D6B266CE76200D7E3DB /* Controller */ = {
+		CA5A8D6B266CE76200D7E3DB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				CAF07187266C0B81006B8BD3 /* AllGroups */,
 				CAF07184266C08CE006B8BD3 /* MyGroups */,
 				CA391080266B88720070D4AE /* MyFriends */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		CA5A8D6C266CE76D00D7E3DB /* Model */ = {
+		CA5A8D6C266CE76D00D7E3DB /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				CA5A8D6D266CE7ED00D7E3DB /* User.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		CAEDA6E0266B9EFA009878E2 /* Controller */ = {
