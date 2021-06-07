@@ -24,7 +24,7 @@ struct Group {
 struct GroupDataStorage {
     static var groups: [Group] = [
         Group(id: 0, name: "Экзистенциальная философия", description: "Интеллектуальный паблик, посвященный философии.", imageName: "existential"),
-        Group(id: 1, name: "Другая философия", description: "Ну такое вот.", imageName: "other"),
+        Group(id: 1, name: "Другая философия", description: "Такое вот.", imageName: "other"),
         Group(id: 2, name: "Голожопые философы", description: "Открытая группа.", imageName: "naked"),
         Group(id: 3, name: "Афоризмы великих людей", description: "Какая-то херня с интернета.", imageName: "quote"),
         Group(id: 4, name: "Чоткие философы", description: "Здоровый образ жизни.", imageName: "chotk"),
