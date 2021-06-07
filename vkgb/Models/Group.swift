@@ -28,5 +28,6 @@ struct GroupDataStorage {
         Group(name: "Чоткие философы", description: "Здоровый образ жизни.", imageName: "chotk"),
         Group(name: "Двумерные девочки и немецкие философы", description: "Культур-мультур.", imageName: "2d"),
         Group(name: "Философия Брюса Ли", description: "Он такой херни не говорил.", imageName: "lee"),
+        Group(name: "Философия для тупых", description: "Постбыдло.", imageName: "tupoi"),
     ]
 }
