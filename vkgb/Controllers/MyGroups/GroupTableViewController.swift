@@ -10,7 +10,7 @@ import UIKit
 class GroupTableViewController: UITableViewController {
     
     //var groups = GroupDataStorage.groups
-    var myGroups: [Group] = [GroupDataStorage.groups[1], GroupDataStorage.groups[3], GroupDataStorage.groups[5]]
+    var myGroups = GroupDataStorage.myGroups
 
     override func viewDidLoad() {
         super.viewDidLoad()
