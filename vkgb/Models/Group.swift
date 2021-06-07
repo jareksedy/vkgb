@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Group {
+struct Group: Codable, Hashable {
     let id: Int
     let name: String
     let description: String?
@@ -34,5 +34,4 @@ struct GroupDataStorage {
     ]
     
     static var myGroups: [Group] = groups.filter{$0.id == 3 || $0.id == 5 || $0.id == 7}
-    
 }
