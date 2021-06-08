@@ -156,15 +156,24 @@
                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                             <color key="highlightedColor" systemColor="secondaryLabelColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzU-dY-3pe">
+                                            <rect key="frame" x="384" y="40.5" width="20" height="19"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="PzU-dY-3pe" secondAttribute="height" id="dGO-wV-TV0"/>
+                                            </constraints>
+                                            <state key="normal" backgroundImage="plus.circle.fill" catalog="system"/>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="sI8-OE-Z7Z" firstAttribute="leading" secondItem="Qg5-hF-Lov" secondAttribute="trailing" constant="20" id="7MD-KO-F30"/>
                                         <constraint firstAttribute="bottom" secondItem="Qg5-hF-Lov" secondAttribute="bottom" priority="999" constant="8" id="B0G-gU-sud"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="sI8-OE-Z7Z" secondAttribute="trailing" constant="20" id="HoA-g8-PSt"/>
                                         <constraint firstItem="sI8-OE-Z7Z" firstAttribute="centerY" secondItem="XOy-Vx-rg3" secondAttribute="centerY" multiplier="0.75" id="IIr-ml-e1h"/>
+                                        <constraint firstItem="PzU-dY-3pe" firstAttribute="centerY" secondItem="XOy-Vx-rg3" secondAttribute="centerY" id="IJg-Rs-FO0"/>
                                         <constraint firstItem="Qg5-hF-Lov" firstAttribute="leading" secondItem="XOy-Vx-rg3" secondAttribute="leading" constant="10" id="Oug-y4-XLP"/>
                                         <constraint firstItem="2Lf-bh-Oni" firstAttribute="centerY" secondItem="XOy-Vx-rg3" secondAttribute="centerY" multiplier="1.25" id="RK5-13-A0f"/>
                                         <constraint firstItem="2Lf-bh-Oni" firstAttribute="leading" secondItem="Qg5-hF-Lov" secondAttribute="trailing" constant="20" id="c57-h6-jMA"/>
+                                        <constraint firstAttribute="trailing" secondItem="PzU-dY-3pe" secondAttribute="trailing" constant="10" id="hrn-N5-uXz"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="2Lf-bh-Oni" secondAttribute="trailing" constant="20" id="lG4-9m-7Lk"/>
                                         <constraint firstItem="Qg5-hF-Lov" firstAttribute="top" secondItem="XOy-Vx-rg3" secondAttribute="top" constant="8" id="xVf-Lt-XB7"/>
                                     </constraints>
@@ -357,6 +366,7 @@
         <image name="bolt.horizontal.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.2.circle" catalog="system" width="128" height="121"/>
         <image name="person.2.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
