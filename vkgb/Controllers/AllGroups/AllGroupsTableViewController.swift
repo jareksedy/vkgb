@@ -18,7 +18,7 @@ class AllGroupsTableViewController: UITableViewController {
                 
                 GroupDataStorage.myGroups.append(self.allOtherGroups[row])
                 
-                let successAlert = UIAlertController(title: "✨✨✨", message: "Поздравляем! Вы только что вступили в группу «\(self.allOtherGroups[row].name)». Ведите себя там хорошо!", preferredStyle: .alert)
+                let successAlert = UIAlertController(title: "✨", message: "Поздравляем! Вы только что вступили в группу «\(self.allOtherGroups[row].name)». Ведите себя там хорошоу!", preferredStyle: .alert)
                 successAlert.addAction(UIAlertAction(title: "Ладно", style: .default, handler: nil))
                 self.present(successAlert, animated: true, completion: nil)
                 
