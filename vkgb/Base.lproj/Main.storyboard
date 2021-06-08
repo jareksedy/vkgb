@@ -162,6 +162,9 @@
                                                 <constraint firstAttribute="width" secondItem="PzU-dY-3pe" secondAttribute="height" id="dGO-wV-TV0"/>
                                             </constraints>
                                             <state key="normal" backgroundImage="plus.circle.fill" catalog="system"/>
+                                            <connections>
+                                                <action selector="addGroupAction:" destination="PEc-dP-MA6" eventType="touchUpInside" id="bT8-Dm-j65"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -182,6 +185,7 @@
                                     <outlet property="AllGroupsDescription" destination="2Lf-bh-Oni" id="VpL-5V-ztK"/>
                                     <outlet property="AllGroupsImage" destination="Qg5-hF-Lov" id="zCx-0T-KZa"/>
                                     <outlet property="AllGroupsName" destination="sI8-OE-Z7Z" id="goP-ni-6Oz"/>
+                                    <outlet property="addGroupButton" destination="PzU-dY-3pe" id="ykM-MS-VkI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
