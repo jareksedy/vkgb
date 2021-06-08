@@ -12,12 +12,19 @@ class GroupTableViewCell: UITableViewCell {
     @IBOutlet weak var GroupImage: UIImageView!
     @IBOutlet weak var GroupName: UILabel!
     @IBOutlet weak var GroupDescription: UILabel!
+    @IBOutlet weak var removeGroupButton: UIButton!
+    
+    var btnActionRemove: ((UITableViewCell) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
+    @IBAction func removeGroupAction(_ sender: Any) {
+        btnActionRemove?(self)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

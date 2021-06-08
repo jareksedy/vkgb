@@ -19,7 +19,7 @@ class AllGroupsTableViewController: UITableViewController {
                 GroupDataStorage.myGroups.append(self.allOtherGroups[row])
                 
                 let successAlert = UIAlertController(title: "✨", message: "Поздравляем! Вы только что вступили в группу «\(self.allOtherGroups[row].name)». Ведите себя там хорошоу!", preferredStyle: .alert)
-                successAlert.addAction(UIAlertAction(title: "Ладно", style: .default, handler: nil))
+                successAlert.addAction(UIAlertAction(title: "Лады!", style: .default, handler: nil))
                 self.present(successAlert, animated: true, completion: nil)
                 
                 self.allOtherGroups.remove(at: row)
@@ -36,6 +36,11 @@ class AllGroupsTableViewController: UITableViewController {
         alert.addAction(UIAlertAction(title: "Нет", style: UIAlertAction.Style.default, handler: nil))
 
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
     override func viewDidLoad() {

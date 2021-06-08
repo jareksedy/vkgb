@@ -84,11 +84,23 @@
                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                             <color key="highlightedColor" systemColor="secondaryLabelColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tv2-6I-xr0">
+                                            <rect key="frame" x="379" y="39" width="20" height="19"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="tv2-6I-xr0" secondAttribute="height" id="xP5-FC-EU5"/>
+                                            </constraints>
+                                            <state key="normal" backgroundImage="minus.circle.fill" catalog="system"/>
+                                            <connections>
+                                                <action selector="removeGroupAction:" destination="3eX-Mg-8Wg" eventType="touchUpInside" id="Rcd-Nh-9Rv"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="tv2-6I-xr0" firstAttribute="centerY" secondItem="ruQ-w8-mZm" secondAttribute="centerY" id="OFQ-aK-fUU"/>
                                         <constraint firstItem="ZJG-Ak-m0l" firstAttribute="centerY" secondItem="ruQ-w8-mZm" secondAttribute="centerY" multiplier="0.75" id="RPp-sR-XAx"/>
                                         <constraint firstItem="ofb-LY-uTR" firstAttribute="centerY" secondItem="ruQ-w8-mZm" secondAttribute="centerY" multiplier="1.25" constant="3.1875" id="arv-yQ-Eng"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ofb-LY-uTR" secondAttribute="trailing" constant="20" id="fVw-yD-TUq"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="tv2-6I-xr0" secondAttribute="trailing" constant="-5" id="h5E-fr-GF2"/>
                                         <constraint firstItem="hAH-Z4-pwp" firstAttribute="leading" secondItem="ruQ-w8-mZm" secondAttribute="leading" constant="10" id="iqS-wH-OF4"/>
                                         <constraint firstItem="ofb-LY-uTR" firstAttribute="leading" secondItem="hAH-Z4-pwp" secondAttribute="trailing" constant="20" id="pwi-9F-YdW"/>
                                         <constraint firstItem="ZJG-Ak-m0l" firstAttribute="leading" secondItem="hAH-Z4-pwp" secondAttribute="trailing" constant="20" id="s8u-Gf-dp7"/>
@@ -101,6 +113,7 @@
                                     <outlet property="GroupDescription" destination="ofb-LY-uTR" id="RyC-ph-izM"/>
                                     <outlet property="GroupImage" destination="hAH-Z4-pwp" id="oyX-Ef-KUH"/>
                                     <outlet property="GroupName" destination="ZJG-Ak-m0l" id="Ew0-6K-Mj4"/>
+                                    <outlet property="removeGroupButton" destination="tv2-6I-xr0" id="grC-ZS-3t5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -368,6 +381,7 @@
     <resources>
         <image name="bolt.horizontal.circle" catalog="system" width="128" height="121"/>
         <image name="bolt.horizontal.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="minus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.2.circle" catalog="system" width="128" height="121"/>
         <image name="person.2.circle.fill" catalog="system" width="128" height="121"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
