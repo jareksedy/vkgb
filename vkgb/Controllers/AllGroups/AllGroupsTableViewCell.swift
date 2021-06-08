@@ -13,13 +13,15 @@ class AllGroupsTableViewCell: UITableViewCell {
     @IBOutlet weak var AllGroupsDescription: UILabel!
     @IBOutlet weak var addGroupButton: UIButton!
     
+    var btnActionAdd: ((UITableViewCell) -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
     @IBAction func addGroupAction(_ sender: Any) {
-        print("hello")
+        btnActionAdd?(self)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
