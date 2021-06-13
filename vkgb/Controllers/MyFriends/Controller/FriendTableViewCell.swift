@@ -23,9 +23,6 @@ class FriendTableViewCell: UITableViewCell {
     func configure(user: User) {
         avatar.image = UIImage(named: user.imageName ?? "defaultAvatar")
         name.text = user.name + " " + user.lastname
-        //print(user.imageName ?? "default")
-        //print(user.name + " " + user.lastname)
-        //print()
     }
 
 }
