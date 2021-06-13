@@ -229,8 +229,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="96.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zdu-qs-KMh" customClass="AvatarView" customModule="vkgb" customModuleProvider="target">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zdu-qs-KMh">
                                             <rect key="frame" x="10" y="8" width="80" height="80"/>
+                                            <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="80" id="81q-EC-aIZ"/>
                                                 <constraint firstAttribute="width" secondItem="zdu-qs-KMh" secondAttribute="height" id="peG-ee-oy3"/>
@@ -292,20 +293,32 @@
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="St5-PM-SlP">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ffh-0t-YsE" customClass="AvatarView" customModule="vkgb" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                        </imageView>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                    <real key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                    <real key="value" value="0.75"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                    <color key="value" systemColor="systemRedColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="St5-PM-SlP" firstAttribute="leading" secondItem="PVL-Bb-Eaf" secondAttribute="leading" id="Acf-LQ-MnB"/>
-                                        <constraint firstAttribute="bottom" secondItem="St5-PM-SlP" secondAttribute="bottom" id="FlU-rd-Eaf"/>
-                                        <constraint firstAttribute="trailing" secondItem="St5-PM-SlP" secondAttribute="trailing" id="US3-ib-TSn"/>
-                                        <constraint firstItem="St5-PM-SlP" firstAttribute="top" secondItem="PVL-Bb-Eaf" secondAttribute="top" id="y8v-A4-yEl"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ffh-0t-YsE" secondAttribute="trailing" id="Nbr-Tx-Zs2"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ffh-0t-YsE" secondAttribute="bottom" id="dDZ-xF-t1F"/>
+                                        <constraint firstItem="Ffh-0t-YsE" firstAttribute="top" secondItem="PVL-Bb-Eaf" secondAttribute="top" id="h7l-JX-Tgl"/>
+                                        <constraint firstItem="Ffh-0t-YsE" firstAttribute="leading" secondItem="PVL-Bb-Eaf" secondAttribute="leading" id="t9C-NP-y7Y"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="100" height="100"/>
                                 <connections>
-                                    <outlet property="friendPhotoView" destination="St5-PM-SlP" id="upO-mq-mAk"/>
+                                    <outlet property="friendPhotoView" destination="Ffh-0t-YsE" id="nSX-FY-HyF"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -318,7 +331,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TQr-FU-Jrz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3481" y="-216"/>
+            <point key="canvasLocation" x="3479.7101449275365" y="-216.29464285714286"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="MMU-mB-bux">
@@ -385,6 +398,9 @@
         <image name="person.2.circle" catalog="system" width="128" height="121"/>
         <image name="person.2.circle.fill" catalog="system" width="128" height="121"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -393,6 +409,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
