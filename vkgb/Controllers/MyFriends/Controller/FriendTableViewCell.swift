@@ -9,23 +9,23 @@ import UIKit
 
 class FriendTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var avatar: UIImageView!
+    @IBOutlet weak var avatar: AvatarView!
     @IBOutlet weak var name: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func configure(user: User) {
         avatar.image = UIImage(named: user.imageName ?? "defaultAvatar")
         name.text = user.name + " " + user.lastname
+        //print(user.imageName ?? "default")
+        //print(user.name + " " + user.lastname)
+        //print()
     }
 
 }
