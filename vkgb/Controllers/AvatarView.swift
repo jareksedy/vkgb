@@ -63,18 +63,22 @@ extension UIView {
     override public func layoutSubviews() {
         
         super.layoutSubviews()
-               
+        
+        backgroundColor = UIColor.clear
+        layer.cornerRadius = bounds.width / 2
+        
+        setImage()
+        
+        addShadow(offset: CGSize(width: 0, height: 0), color: shadowColor, radius: shadowRadius, opacity: shadowOpacity)
+        
+    }
+    
+    public func setImage() {
         let imageContent = UIImageView()
         imageContent.image = image
         imageContent.frame = bounds.insetBy(dx: 15, dy: 15)
         imageContent.layer.cornerRadius = imageContent.bounds.width / 2
         imageContent.clipsToBounds = true
         addSubview(imageContent)
-        
-        backgroundColor = UIColor.clear
-        layer.cornerRadius = bounds.width / 2
-        
-        addShadow(offset: CGSize(width: 0, height: 0), color: shadowColor, radius: shadowRadius, opacity: shadowOpacity)
-        
     }
 }
