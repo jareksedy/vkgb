@@ -249,17 +249,27 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzM-IA-59b">
-                                            <rect key="frame" x="100" y="38" width="274" height="21"/>
+                                            <rect key="frame" x="100" y="38" width="224" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hr-dN-vEg" customClass="LikeButton" customModule="vkgb" customModuleProvider="target">
+                                            <rect key="frame" x="304" y="33.5" width="100" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Dkp-Zq-7s0"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="yzM-IA-59b" secondAttribute="trailing" priority="999" constant="20" id="1aJ-YS-6iX"/>
+                                        <constraint firstItem="6Hr-dN-vEg" firstAttribute="centerY" secondItem="dEv-XY-rGz" secondAttribute="centerY" id="MVS-yF-1yJ"/>
                                         <constraint firstItem="laW-k4-pTZ" firstAttribute="top" secondItem="dEv-XY-rGz" secondAttribute="top" constant="8" id="V9c-Oh-dpD"/>
                                         <constraint firstItem="yzM-IA-59b" firstAttribute="centerY" secondItem="dEv-XY-rGz" secondAttribute="centerY" id="aNa-sa-NEo"/>
+                                        <constraint firstItem="6Hr-dN-vEg" firstAttribute="leading" secondItem="yzM-IA-59b" secondAttribute="trailing" constant="-20" id="gg4-au-b9g"/>
                                         <constraint firstAttribute="bottom" secondItem="laW-k4-pTZ" secondAttribute="bottom" priority="999" constant="8" id="nW2-MX-blG"/>
+                                        <constraint firstItem="6Hr-dN-vEg" firstAttribute="trailing" secondItem="dEv-XY-rGz" secondAttribute="trailingMargin" constant="10" id="uMO-Qb-Wnl"/>
                                         <constraint firstItem="yzM-IA-59b" firstAttribute="leading" secondItem="laW-k4-pTZ" secondAttribute="trailing" constant="10" id="uXJ-jA-bHf"/>
                                         <constraint firstItem="laW-k4-pTZ" firstAttribute="leading" secondItem="dEv-XY-rGz" secondAttribute="leading" constant="10" id="yIT-t4-Ll2"/>
                                     </constraints>
