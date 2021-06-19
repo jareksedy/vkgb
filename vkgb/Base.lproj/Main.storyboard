@@ -182,25 +182,35 @@
                                             </constraints>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xxk-j4-Wfg" customClass="LikeButton" customModule="vkgb" customModuleProvider="target">
-                                            <rect key="frame" x="10" y="587" width="394" height="30"/>
+                                            <rect key="frame" x="10" y="587" width="50" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="xUI-ad-977"/>
                                             </constraints>
                                             <state key="normal" title="Likes"/>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iti-na-9pM" customClass="ViewsCounter" customModule="vkgb" customModuleProvider="target">
+                                            <rect key="frame" x="354" y="587" width="50" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Dc5-2i-skj"/>
+                                            </constraints>
+                                            <state key="normal" title="Views"/>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="0Zb-bq-JV1" firstAttribute="leading" secondItem="aZ1-Vf-G5O" secondAttribute="leading" constant="10" id="0z9-CF-Bi1"/>
                                         <constraint firstAttribute="trailing" secondItem="0Zb-bq-JV1" secondAttribute="trailing" constant="10" id="DLc-LX-l8m"/>
-                                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Xxk-j4-Wfg" secondAttribute="trailing" constant="10" id="EFZ-z5-baC"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Xxk-j4-Wfg" secondAttribute="trailing" constant="10" id="EFZ-z5-baC"/>
+                                        <constraint firstItem="iti-na-9pM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Xxk-j4-Wfg" secondAttribute="trailing" constant="10" id="HYC-le-zv3"/>
                                         <constraint firstItem="Xxk-j4-Wfg" firstAttribute="leading" secondItem="aZ1-Vf-G5O" secondAttribute="leading" constant="10" id="MRE-00-yjd"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="nDV-DM-J6x" secondAttribute="trailing" constant="10" id="P50-8Z-fVP"/>
                                         <constraint firstItem="pWq-vr-7Cr" firstAttribute="top" secondItem="nDV-DM-J6x" secondAttribute="bottom" constant="10" id="amM-1m-hEg"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="pWq-vr-7Cr" secondAttribute="trailing" constant="10" id="bQc-B7-Fc3"/>
                                         <constraint firstAttribute="bottom" secondItem="uEV-Lo-U2f" secondAttribute="bottom" priority="999" constant="50" id="cSO-D9-xRl"/>
                                         <constraint firstItem="nDV-DM-J6x" firstAttribute="top" secondItem="aZ1-Vf-G5O" secondAttribute="topMargin" constant="18" id="dFj-Vr-aNz"/>
+                                        <constraint firstAttribute="trailing" secondItem="iti-na-9pM" secondAttribute="trailing" constant="10" id="fcI-2K-uii"/>
                                         <constraint firstItem="pWq-vr-7Cr" firstAttribute="leading" secondItem="ziv-V9-BIb" secondAttribute="trailing" constant="10" id="hnf-oi-Mc7"/>
                                         <constraint firstAttribute="trailing" secondItem="uEV-Lo-U2f" secondAttribute="trailing" constant="10" id="iUz-Zt-gFT"/>
+                                        <constraint firstItem="iti-na-9pM" firstAttribute="top" secondItem="uEV-Lo-U2f" secondAttribute="bottom" constant="10" id="lFf-2G-cL2"/>
                                         <constraint firstItem="Xxk-j4-Wfg" firstAttribute="top" secondItem="uEV-Lo-U2f" secondAttribute="bottom" constant="10" id="mYg-F3-Zlc"/>
                                         <constraint firstItem="ziv-V9-BIb" firstAttribute="leading" secondItem="aZ1-Vf-G5O" secondAttribute="leading" constant="10" id="pAs-uF-Jwi"/>
                                         <constraint firstItem="nDV-DM-J6x" firstAttribute="leading" secondItem="ziv-V9-BIb" secondAttribute="trailing" constant="10" id="rKq-O9-TQe"/>

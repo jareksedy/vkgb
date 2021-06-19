@@ -23,6 +23,7 @@
 		CAD15343267DA8060016985D /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD15342267DA8060016985D /* News.swift */; };
 		CAD15345267DADB90016985D /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD15344267DADB80016985D /* NewsViewController.swift */; };
 		CAD15347267DB06F0016985D /* NewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD15346267DB06F0016985D /* NewsViewCell.swift */; };
+		CAD1534A267DDA730016985D /* ViewsCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD15349267DDA730016985D /* ViewsCounter.swift */; };
 		CADAF029266D382600BFF9AC /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAF028266D382600BFF9AC /* Group.swift */; };
 		CADAF02D266D40FD00BFF9AC /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAF02C266D40FD00BFF9AC /* GroupTableViewCell.swift */; };
 		CADAF02F266D4EFB00BFF9AC /* AllGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADAF02E266D4EFB00BFF9AC /* AllGroupsTableViewCell.swift */; };
@@ -50,6 +51,7 @@
 		CAD15342267DA8060016985D /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		CAD15344267DADB80016985D /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		CAD15346267DB06F0016985D /* NewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewCell.swift; sourceTree = "<group>"; };
+		CAD15349267DDA730016985D /* ViewsCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsCounter.swift; sourceTree = "<group>"; };
 		CADAF028266D382600BFF9AC /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		CADAF02C266D40FD00BFF9AC /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		CADAF02E266D4EFB00BFF9AC /* AllGroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsTableViewCell.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				CA391080266B88720070D4AE /* MyFriends */,
 				CAB1393F2675B3B900B825CF /* AvatarView.swift */,
 				CA3649E32676540500227B69 /* LikeButton.swift */,
+				CAD15349267DDA730016985D /* ViewsCounter.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				CA1C0A2C266364E7000D95B8 /* LoginFormController.swift in Sources */,
 				CA1C0A182663643A000D95B8 /* AppDelegate.swift in Sources */,
 				CAF07189266C0BB3006B8BD3 /* AllGroupsTableViewController.swift in Sources */,
+				CAD1534A267DDA730016985D /* ViewsCounter.swift in Sources */,
 				CAD15347267DB06F0016985D /* NewsViewCell.swift in Sources */,
 				CAF07186266C0912006B8BD3 /* GroupTableViewController.swift in Sources */,
 				CA5A8D6A266CE6AD00D7E3DB /* FriendTableViewCell.swift in Sources */,
