@@ -31,18 +31,25 @@ class AllGroupsTableViewController: UITableViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     private func showAlertForRow(_ row: Int) {
-        let alert = UIAlertController(title: "🤔\n", message: "Вы действительно желаете вступить в группу «\(allOtherGroups[row].name)»?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "🤔\n", message: "Вы действительно желаете вступить в группу «\(searching ? foundGroups[row].name : allOtherGroups[row].name)»?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Да", style: UIAlertAction.Style.default, handler: { action in
             switch action.style {
             case .default:
                 
-                GroupDataStorage.myGroups.append(self.allOtherGroups[row])
+                GroupDataStorage.myGroups.append(self.searching ? self.foundGroups[row] : self.allOtherGroups[row])
                 
-                let successAlert = UIAlertController(title: "✨\n", message: "Поздравляем! Вы только что вступили в группу «\(self.allOtherGroups[row].name)». Ведите себя там хорошоу!", preferredStyle: .alert)
+                let successAlert = UIAlertController(title: "✨\n", message: "Поздравляем! Вы только что вступили в группу «\(self.searching ? self.foundGroups[row].name : self.allOtherGroups[row].name)». Ведите себя там хорошоу!", preferredStyle: .alert)
                 successAlert.addAction(UIAlertAction(title: "Лады!", style: .default, handler: nil))
                 self.present(successAlert, animated: true, completion: nil)
                 
-                self.allOtherGroups.remove(at: row)
+                if self.searching {
+                    let absRow = self.allOtherGroups.firstIndex(where: {$0.id == self.foundGroups[row].id})
+                    self.allOtherGroups.remove(at: absRow!)
+                    self.foundGroups.remove(at: row)
+                } else {
+                    self.allOtherGroups.remove(at: row)
+                }
+                
                 self.tableView.reloadData()
     
             case .cancel:
@@ -85,8 +92,8 @@ class AllGroupsTableViewController: UITableViewController {
         }
         cell.configure(group: searching ? foundGroups[indexPath.row] : allOtherGroups[indexPath.row])
         
-        cell.btnActionAdd = {(cell) in
-            self.showAlertForRow(tableView.indexPath(for: cell)!.row)
+        cell.btnActionAdd = {_ in
+            self.showAlertForRow(indexPath.row)
         }
         
         return cell

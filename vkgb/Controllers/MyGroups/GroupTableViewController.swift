@@ -62,8 +62,8 @@ class GroupTableViewController: UITableViewController {
         
         cell.configure(group: GroupDataStorage.myGroups[indexPath.row])
         
-        cell.btnActionRemove = {(cell) in
-            self.showAlertForRow(tableView.indexPath(for: cell)!.row)
+        cell.btnActionRemove = {_ in
+            self.showAlertForRow(indexPath.row)
         }
 
         return cell
