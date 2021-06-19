@@ -134,6 +134,52 @@
             </objects>
             <point key="canvasLocation" x="2628.985507246377" y="444.64285714285711"/>
         </scene>
+        <!--Мои новости-->
+        <scene sceneID="oBy-fQ-aQX">
+            <objects>
+                <tableViewController id="Gdj-FR-3Fz" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="O1z-0S-y6v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" id="ibj-Qt-eZ1">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ibj-Qt-eZ1" id="aZ1-Vf-G5O">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Gdj-FR-3Fz" id="6Kb-Sd-jii"/>
+                            <outlet property="delegate" destination="Gdj-FR-3Fz" id="irg-sp-Far"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Мои новости" id="avJ-kA-w9k"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zqQ-xu-TSH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2629" y="1117"/>
+        </scene>
+        <!--Новости-->
+        <scene sceneID="psH-sC-Pud">
+            <objects>
+                <navigationController id="I1Z-Le-NaM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Новости" image="newspaper" catalog="system" selectedImage="newspaper.fill" id="51j-lU-9C4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DXi-4w-oVQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Gdj-FR-3Fz" kind="relationship" relationship="rootViewController" id="Nxh-V2-U6V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qa8-6i-H0m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1762" y="1118"/>
+        </scene>
         <!--Все группы-->
         <scene sceneID="QYF-33-I2Q">
             <objects>
@@ -367,6 +413,7 @@
                     <connections>
                         <segue destination="QpI-Ea-Fmj" kind="relationship" relationship="viewControllers" id="m7I-T9-c8L"/>
                         <segue destination="C8E-Km-zEz" kind="relationship" relationship="viewControllers" id="TtA-Ng-xwN"/>
+                        <segue destination="I1Z-Le-NaM" kind="relationship" relationship="viewControllers" id="2YD-RJ-c98"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kyd-36-ga6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -416,6 +463,8 @@
         <image name="bolt.horizontal.circle" catalog="system" width="128" height="121"/>
         <image name="bolt.horizontal.circle.fill" catalog="system" width="128" height="121"/>
         <image name="minus.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="newspaper" catalog="system" width="128" height="108"/>
+        <image name="newspaper.fill" catalog="system" width="128" height="111"/>
         <image name="person.2.circle" catalog="system" width="128" height="121"/>
         <image name="person.2.circle.fill" catalog="system" width="128" height="121"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
