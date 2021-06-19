@@ -8,11 +8,13 @@
 import Foundation
 
 struct User {
+    let id: Int
     let name: String
     let lastname: String
     let imageName: String?
     
-    init(name: String, lastname:String, imageName: String? = nil) {
+    init(id: Int, name: String, lastname:String, imageName: String? = nil) {
+        self.id = id
         self.name = name
         self.lastname = lastname
         self.imageName = imageName ?? "defaultAvatar"
@@ -21,17 +23,17 @@ struct User {
 
 struct UserDataStorage {
     static var users: [User] = [
-        User(name: "Мартин", lastname: "Хайдеггер", imageName: "Heidegger"),
-        User(name: "Фридрих", lastname: "Ницше", imageName: "Nietzsche"),
-        User(name: "Артур", lastname: "Шопенгауэр", imageName: "Schopenhauer"),
-        User(name: "Фёдор", lastname: "Достоевский", imageName: "Dostoyevsky"),
-        User(name: "Карл", lastname: "Юнг", imageName: "Jung"),
-        User(name: "Иммануил", lastname: "Кант", imageName: "Kant"),
-        User(name: "Альбер", lastname: "Камю", imageName: "Camus"),
-        User(name: "Людвиг", lastname: "Витгенштейн"),
-        User(name: "Сёрен", lastname: "Кьеркегор", imageName: "Kierkegaard"),
-        User(name: "Зигмунд", lastname: "Фрейд", imageName: "Freud"),
-        User(name: "Жан-Поль", lastname: "Сартр", imageName: "Sartre"),
-        User(name: "Карл", lastname: "Ясперс"),
+        User(id: 0, name: "Мартин", lastname: "Хайдеггер", imageName: "Heidegger"),
+        User(id: 1, name: "Фридрих", lastname: "Ницше", imageName: "Nietzsche"),
+        User(id: 2, name: "Артур", lastname: "Шопенгауэр", imageName: "Schopenhauer"),
+        User(id: 3, name: "Фёдор", lastname: "Достоевский", imageName: "Dostoyevsky"),
+        User(id: 4, name: "Карл", lastname: "Юнг", imageName: "Jung"),
+        User(id: 5, name: "Иммануил", lastname: "Кант", imageName: "Kant"),
+        User(id: 6, name: "Альбер", lastname: "Камю", imageName: "Camus"),
+        User(id: 7, name: "Людвиг", lastname: "Витгенштейн"),
+        User(id: 8, name: "Сёрен", lastname: "Кьеркегор", imageName: "Kierkegaard"),
+        User(id: 9, name: "Зигмунд", lastname: "Фрейд", imageName: "Freud"),
+        User(id: 10, name: "Жан-Поль", lastname: "Сартр", imageName: "Sartre"),
+        User(id: 11, name: "Карл", lastname: "Ясперс"),
     ]
 }
