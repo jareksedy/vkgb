@@ -17,7 +17,13 @@ struct News {
     init(id: Int, userId: Int, text: String, imageName: String? = nil) {
         self.id = id
         self.userId = userId
-        self.date = "19.06.2021"
+        
+        self.date = { () -> String in
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd.MM.yyyy"
+            return formatter.string(from: Date())
+        }()
+        
         self.text = text
         self.imageName = imageName
     }
