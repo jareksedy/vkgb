@@ -11,6 +11,7 @@ class FriendTableViewCell: UITableViewCell {
 
     @IBOutlet weak var avatar: AvatarView!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var userImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,8 +26,7 @@ class FriendTableViewCell: UITableViewCell {
     }
     
     func configure(user: User) {
-        avatar.image = UIImage(named: user.imageName ?? "defaultAvatar")
-        avatar.setImage()
+        userImage.image = UIImage(named: user.imageName ?? "defaultAvatar")
         name.text = user.name + " " + user.lastname
     }
 }
