@@ -36,7 +36,7 @@ class LikeButton: UIButton {
     
     // MARK: - Internal methods
     
-    fileprivate func configure() {
+    private func configure() {
 
         self.setTitle("\(liked ? "♥" : "♡") \(counter)", for: .normal)
         

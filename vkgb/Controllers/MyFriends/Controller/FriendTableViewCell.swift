@@ -11,6 +11,7 @@ class FriendTableViewCell: UITableViewCell {
 
     @IBOutlet weak var avatar: AvatarView!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var likeButton: LikeButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,6 +19,11 @@ class FriendTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        //likeButton.configure()
     }
     
     func configure(user: User) {
