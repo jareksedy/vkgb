@@ -10,12 +10,12 @@ import UIKit
 class GroupTableViewController: UITableViewController {
     
     private func showAlertForRow(_ row: Int) {
-        let alert = UIAlertController(title: "🤷🏿‍♂️", message: "Вы действительно желаете покинуть группу «\(GroupDataStorage.myGroups[row].name)»?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "🤷🏿‍♂️\n", message: "Вы действительно желаете покинуть группу «\(GroupDataStorage.myGroups[row].name)»?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Да", style: UIAlertAction.Style.default, handler: { action in
             switch action.style {
             case .default:
                 
-                let successAlert = UIAlertController(title: "🙌", message: "Вы только что покинули группу «\(GroupDataStorage.myGroups[row].name)».", preferredStyle: .alert)
+                let successAlert = UIAlertController(title: "🙌\n", message: "Вы только что покинули группу «\(GroupDataStorage.myGroups[row].name)».", preferredStyle: .alert)
                 successAlert.addAction(UIAlertAction(title: "Окейно!", style: .default, handler: nil))
                 self.present(successAlert, animated: true, completion: nil)
                 

@@ -7,18 +7,38 @@
 
 import UIKit
 
-class AllGroupsTableViewController: UITableViewController {
-    var allOtherGroups = Array(Set(GroupDataStorage.groups).subtracting(GroupDataStorage.myGroups))
+extension AllGroupsTableViewController: UISearchBarDelegate {
+    
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        foundGroups = searchText != "" ? allOtherGroups.filter {$0.name.lowercased().contains(searchText.lowercased())} : allOtherGroups
+        searching = true
+        tableView.reloadData()
+    }
+    
+    public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+        searchBar.text = ""
+        tableView.reloadData()
+    }
+}
 
+class AllGroupsTableViewController: UITableViewController {
+    
+    var allOtherGroups = Array(Set(GroupDataStorage.groups).subtracting(GroupDataStorage.myGroups))
+    var foundGroups = [Group]()
+    var searching = false
+
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     private func showAlertForRow(_ row: Int) {
-        let alert = UIAlertController(title: "🤔", message: "Вы действительно желаете вступить в группу «\(allOtherGroups[row].name)»?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "🤔\n", message: "Вы действительно желаете вступить в группу «\(allOtherGroups[row].name)»?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Да", style: UIAlertAction.Style.default, handler: { action in
             switch action.style {
             case .default:
                 
                 GroupDataStorage.myGroups.append(self.allOtherGroups[row])
                 
-                let successAlert = UIAlertController(title: "✨", message: "Поздравляем! Вы только что вступили в группу «\(self.allOtherGroups[row].name)». Ведите себя там хорошоу!", preferredStyle: .alert)
+                let successAlert = UIAlertController(title: "✨\n", message: "Поздравляем! Вы только что вступили в группу «\(self.allOtherGroups[row].name)». Ведите себя там хорошоу!", preferredStyle: .alert)
                 successAlert.addAction(UIAlertAction(title: "Лады!", style: .default, handler: nil))
                 self.present(successAlert, animated: true, completion: nil)
                 
@@ -45,6 +65,7 @@ class AllGroupsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.searchBar.delegate = self
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -52,7 +73,7 @@ class AllGroupsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allOtherGroups.count
+        return searching ? foundGroups.count : allOtherGroups.count
     }
     
     // MARK: - Table view data source
@@ -62,7 +83,7 @@ class AllGroupsTableViewController: UITableViewController {
         else {
             return UITableViewCell()
         }
-        cell.configure(group: allOtherGroups[indexPath.row])
+        cell.configure(group: searching ? foundGroups[indexPath.row] : allOtherGroups[indexPath.row])
         
         cell.btnActionAdd = {(cell) in
             self.showAlertForRow(tableView.indexPath(for: cell)!.row)

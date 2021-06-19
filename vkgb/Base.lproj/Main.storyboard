@@ -343,6 +343,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Все группы" id="lHm-Ys-uH8"/>
+                    <connections>
+                        <outlet property="searchBar" destination="gBx-K0-tee" id="8hs-u9-GTW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="unC-Et-xbj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
