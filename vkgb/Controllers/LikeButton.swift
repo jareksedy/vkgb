@@ -55,5 +55,9 @@ class LikeButton: UIButton {
         liked.toggle()
         counter += liked ? 1 : -1
     }
+
+    func setup(likes: Int, liked: Bool) {
+        
+    }
     
 }
