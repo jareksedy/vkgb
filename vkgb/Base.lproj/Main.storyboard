@@ -30,7 +30,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchDown" id="qWz-uS-ouG"/>
-                                    <segue destination="ITz-7N-PQD" kind="show" id="BaU-2i-t29"/>
+                                    <segue destination="5Kq-vw-69P" kind="show" id="121-aS-VJw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="73.913043478260875" y="85.714285714285708"/>
+            <point key="canvasLocation" x="-729" y="86"/>
         </scene>
         <!--Мои группы-->
         <scene sceneID="sWh-Rx-e3b">
@@ -469,6 +469,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TQr-FU-Jrz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3479.7101449275365" y="-216.29464285714286"/>
+        </scene>
+        <!--Animation Screen View Controller-->
+        <scene sceneID="xKe-aW-RWA">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="5Kq-vw-69P" customClass="AnimationScreenViewController" customModule="vkgb" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Sf-mu-g0y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0LP-VJ-PKm">
+                                <rect key="frame" x="107" y="408" width="200" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Phm-wO-bQE"/>
+                                    <constraint firstAttribute="width" constant="200" id="rO1-X8-phH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="he4-O8-k3i"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0LP-VJ-PKm" firstAttribute="centerY" secondItem="0Sf-mu-g0y" secondAttribute="centerY" id="ffS-F0-KGq"/>
+                            <constraint firstItem="0LP-VJ-PKm" firstAttribute="centerX" secondItem="0Sf-mu-g0y" secondAttribute="centerX" id="wAw-E5-Qow"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4z2-8O-mke"/>
+                    <connections>
+                        <outlet property="dotView" destination="0LP-VJ-PKm" id="Gbq-a7-hG5"/>
+                        <segue destination="ITz-7N-PQD" kind="show" identifier="goForth" id="PX2-JW-xgL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pvi-Np-c9t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76.811594202898561" y="85.714285714285708"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="MMU-mB-bux">

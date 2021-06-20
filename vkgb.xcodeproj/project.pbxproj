@@ -19,6 +19,7 @@
 		CA5A8D6E266CE7ED00D7E3DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A8D6D266CE7ED00D7E3DB /* User.swift */; };
 		CA68B5F5266BD9C000BE0DE7 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA68B5F4266BD9C000BE0DE7 /* FriendsTableViewController.swift */; };
 		CA68B5F7266BDE0800BE0DE7 /* FriendsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA68B5F6266BDE0800BE0DE7 /* FriendsCollectionViewController.swift */; };
+		CA823864267F0029001ACEB7 /* AnimationScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA823863267F0029001ACEB7 /* AnimationScreenViewController.swift */; };
 		CAB139402675B3B900B825CF /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1393F2675B3B900B825CF /* AvatarView.swift */; };
 		CAD15343267DA8060016985D /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD15342267DA8060016985D /* News.swift */; };
 		CAD15345267DADB90016985D /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD15344267DADB80016985D /* NewsViewController.swift */; };
@@ -47,6 +48,7 @@
 		CA5A8D6D266CE7ED00D7E3DB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CA68B5F4266BD9C000BE0DE7 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 		CA68B5F6266BDE0800BE0DE7 /* FriendsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewController.swift; sourceTree = "<group>"; };
+		CA823863267F0029001ACEB7 /* AnimationScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationScreenViewController.swift; sourceTree = "<group>"; };
 		CAB1393F2675B3B900B825CF /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		CAD15342267DA8060016985D /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		CAD15344267DADB80016985D /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				CAB1393F2675B3B900B825CF /* AvatarView.swift */,
 				CA3649E32676540500227B69 /* LikeButton.swift */,
 				CAD15349267DDA730016985D /* ViewsCounter.swift */,
+				CA823863267F0029001ACEB7 /* AnimationScreenViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				CA3649E42676540500227B69 /* LikeButton.swift in Sources */,
 				CA5A8D6E266CE7ED00D7E3DB /* User.swift in Sources */,
 				CAB139402675B3B900B825CF /* AvatarView.swift in Sources */,
+				CA823864267F0029001ACEB7 /* AnimationScreenViewController.swift in Sources */,
 				CAD15345267DADB90016985D /* NewsViewController.swift in Sources */,
 				CAD15343267DA8060016985D /* News.swift in Sources */,
 				CADAF02F266D4EFB00BFF9AC /* AllGroupsTableViewCell.swift in Sources */,
