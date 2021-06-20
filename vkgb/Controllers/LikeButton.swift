@@ -52,7 +52,27 @@ class LikeButton: UIButton {
     }
     
     @objc func onTap(_ sender: UIButton) {
-        liked.toggle()
-        counter += liked ? 1 : -1
+        
+        self.liked.toggle()
+        self.counter += self.liked ? 1 : -1
+        
+        LikeButton.animate(withDuration: 0.25,
+                           delay: 0,
+                           usingSpringWithDamping: 0.75,
+                           initialSpringVelocity: 0.25,
+                           options: [],
+                           animations: {
+                            self.transform = CGAffineTransform(rotationAngle: (CGFloat.pi / 12) * (self.liked ? -1 : 1))
+                           },
+                           completion: {_ in
+                            LikeButton.animate(withDuration: 0.25,
+                                               delay: 0,
+                                               options: [.allowUserInteraction],
+                                               animations: {
+                                                self.transform = CGAffineTransform(rotationAngle: 0)
+                                               },
+                                               completion: nil)
+                           })
     }
+    
 }
