@@ -13,11 +13,25 @@ class AllGroupsTableViewCell: UITableViewCell {
     @IBOutlet weak var AllGroupsDescription: UILabel!
     @IBOutlet weak var addGroupButton: UIButton!
     
+    @IBAction func tapFunction(sender: UITapGestureRecognizer) {
+        AllGroupsTableViewCell.animate(withDuration: 0.75,
+                                    delay: 0,
+                                    usingSpringWithDamping: 0.25,
+                                    initialSpringVelocity: 0.75,
+                                    options: [.allowUserInteraction],
+                                    animations: {
+                                        self.AllGroupsImage.bounds = self.AllGroupsImage.bounds.insetBy(dx: 40, dy: 40)
+                                    },
+                                    completion: nil)
+    }
+    
     var btnActionAdd: ((UITableViewCell) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        let tap = UITapGestureRecognizer(target: self, action: #selector(AllGroupsTableViewCell.tapFunction))
+        AllGroupsImage.isUserInteractionEnabled = true
+        AllGroupsImage.addGestureRecognizer(tap)
     }
 
     @IBAction func addGroupAction(_ sender: Any) {
