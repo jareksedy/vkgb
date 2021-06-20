@@ -14,25 +14,10 @@ class GroupTableViewCell: UITableViewCell {
     @IBOutlet weak var GroupDescription: UILabel!
     @IBOutlet weak var removeGroupButton: UIButton!
     
-    @IBAction func tapFunction(sender: UITapGestureRecognizer) {
-        GroupTableViewCell.animate(withDuration: 0.75,
-                                    delay: 0,
-                                    usingSpringWithDamping: 0.25,
-                                    initialSpringVelocity: 0.75,
-                                    options: [.allowUserInteraction],
-                                    animations: {
-                                        self.GroupImage.bounds = self.GroupImage.bounds.insetBy(dx: 40, dy: 40)
-                                    },
-                                    completion: nil)
-    }
-    
     var btnActionRemove: ((UITableViewCell) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        let tap = UITapGestureRecognizer(target: self, action: #selector(GroupTableViewCell.tapFunction))
-        GroupImage.isUserInteractionEnabled = true
-        GroupImage.addGestureRecognizer(tap)
     }
     
     @IBAction func removeGroupAction(_ sender: Any) {
