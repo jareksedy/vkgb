@@ -51,7 +51,7 @@ class AnimationScreenViewController: UIViewController {
         dotView.addSubview(dot3)
         
         let initialDelay = 0.25
-        let animationDuration = 0.15
+        let animationDuration = 0.25
         
         delay(initialDelay){
             
