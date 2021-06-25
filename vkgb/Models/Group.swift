@@ -33,5 +33,5 @@ struct GroupDataStorage {
         Group(id: 7, name: "Философия для тупых", description: "Постбыдло.", imageName: "tupoi"),
     ]
     
-    static var myGroups: [Group] = groups.filter{$0.id == 3 || $0.id == 5 || $0.id == 7}
+    static var myGroups: [Group] = groups.filter{$0.id == 3 || $0.id == 7}
 }
