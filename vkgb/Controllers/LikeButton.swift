@@ -38,7 +38,7 @@ class LikeButton: UIButton {
     
     private func configure() {
 
-        self.setTitle("\(liked ? " ♥" : " ♡") \(counter) ", for: .normal)
+        self.setTitle("  \(liked ? "♥" : "♡") \(counter)  ", for: .normal)
         
         self.backgroundColor = liked ? UIColor.systemPink : UIColor.clear
         self.setTitleColor(liked ? UIColor.white : UIColor.gray, for: .normal)
