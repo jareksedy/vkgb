@@ -30,7 +30,7 @@ struct UserDataStorage {
         User(id: 4, name: "Карл", lastname: "Юнг", imageName: "Jung"),
         User(id: 5, name: "Иммануил", lastname: "Кант", imageName: "Kant"),
         User(id: 6, name: "Альбер", lastname: "Камю", imageName: "Camus"),
-        User(id: 7, name: "Людвиг", lastname: "Витгенштейн"),
+        User(id: 7, name: "Людвиг", lastname: "Витгенштейн", imageName: "wit"),
         User(id: 8, name: "Сёрен", lastname: "Кьеркегор", imageName: "Kierkegaard"),
         User(id: 9, name: "Зигмунд", lastname: "Фрейд", imageName: "Freud"),
         User(id: 10, name: "Жан-Поль", lastname: "Сартр", imageName: "Sartre"),

@@ -90,7 +90,7 @@ class FriendsTableViewController: UITableViewController {
         
         let indexSection = tableView.indexPathForSelectedRow!.section
         
-        friendsCollectionViewController.userID = sortedFriends[indexSection][indexRow].id
+        friendsCollectionViewController.userId = sortedFriends[indexSection][indexRow].id
     }
     
 

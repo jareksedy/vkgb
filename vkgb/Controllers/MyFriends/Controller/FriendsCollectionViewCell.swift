@@ -9,6 +9,6 @@ import UIKit
 
 class FriendsCollectionViewCell: UICollectionViewCell {
    
-    @IBOutlet weak var friendPhotoView: AvatarView!
+    @IBOutlet weak var friendPhotoView: UIImageView!
 
 }

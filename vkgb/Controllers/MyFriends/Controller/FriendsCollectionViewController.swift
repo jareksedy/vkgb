@@ -12,17 +12,24 @@ private let reuseIdentifier = "FriendsCollectionViewCell"
 class FriendsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var users = UserDataStorage.users
-    var userID: Int?
+    var userPhotos = UserPhotoGalleryDataStorage.userPhotoGallery
+    var userId: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = users[userID ?? 0].name + " " + users[userID ?? 0].lastname
+        navigationItem.title = users[userId ?? 0].name + " " + users[userId ?? 0].lastname
     }
 
     //MARK: - UICollectionViewDelegateFlowLayout
 
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
         {
+            if userId != nil {
+                if userPhotos[userId!].imageNames != nil {
+                    return CGSize(width: 118.0, height: 118.0)
+                }
+            }
+            
            return CGSize(width: 300.0, height: 300.0)
         }
     
@@ -35,15 +42,29 @@ class FriendsCollectionViewController: UICollectionViewController, UICollectionV
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
+        
+        if userId != nil {
+            if userPhotos[userId!].imageNames != nil {
+                return userPhotos[userId!].imageNames!.count
+            }
+        }
+        
         return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendsPictures", for: indexPath) as! FriendsCollectionViewCell
         
-        cell.friendPhotoView.image = UIImage(named: users[userID ?? 0].imageName ?? "defaultAvatar")
-    
+        if userId != nil {
+            if userPhotos[userId!].imageNames != nil {
+                cell.friendPhotoView.image = UIImage(named: userPhotos[userId!].imageNames![indexPath.row])
+            } else {
+                cell.friendPhotoView.image = UIImage(named: users[userId ?? 0].imageName ?? "defaultAvatar")
+            }
+        } else {
+            cell.friendPhotoView.image = UIImage(named: users[userId ?? 0].imageName ?? "defaultAvatar")
+        }
+        
         return cell
     }
 }
