@@ -10,7 +10,7 @@ import Foundation
 
 class LikeButton: UIButton {
     
-    var counter = Int.random(in: 0...99)
+    var counter = Int.random(in: 9...999)
     var liked = false
     
     // MARK: - UIButton
@@ -38,7 +38,7 @@ class LikeButton: UIButton {
     
     private func configure() {
 
-        self.setTitle("\(liked ? "♥" : "♡") \(counter)", for: .normal)
+        self.setTitle("\(liked ? " ♥" : " ♡") \(counter) ", for: .normal)
         
         self.backgroundColor = liked ? UIColor.systemPink : UIColor.clear
         self.setTitleColor(liked ? UIColor.white : UIColor.gray, for: .normal)
