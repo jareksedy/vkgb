@@ -579,7 +579,7 @@
         <!--Группы-->
         <scene sceneID="vnM-hG-d8h">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C8E-Km-zEz" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C8E-Km-zEz" customClass="NavigationAnimations" customModule="vkgb" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Группы" image="bolt.horizontal.circle" catalog="system" selectedImage="bolt.horizontal.circle.fill" id="cc8-JM-UbP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZZ4-Ve-JTc">
