@@ -8,11 +8,18 @@
 import UIKit
 
 class LoginFormController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var loginButton: UIButton!
+    
+    @IBAction func loginButton(_ sender: UIButton) {
+        UIButton.animate(withDuration: 0.75,
+                                    delay: 0,
+                                    usingSpringWithDamping: 0.25,
+                                    initialSpringVelocity: 0.75,
+                                    options: [.allowUserInteraction],
+                                    animations: {
+                                        self.loginButton.bounds = self.loginButton.bounds.insetBy(dx: -10, dy: -10)
+                                    },
+                                    completion: nil)
     }
     
 }
