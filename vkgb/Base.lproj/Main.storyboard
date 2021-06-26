@@ -469,8 +469,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dze-9B-1Vu">
-                                <rect key="frame" x="10" y="224" width="394" height="394"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dze-9B-1Vu" customClass="CarouselView" customModule="vkgb" customModuleProvider="target">
+                                <rect key="frame" x="8" y="222" width="398" height="398"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dze-9B-1Vu" secondAttribute="height" id="ace-kj-OQ4"/>
                                 </constraints>
@@ -478,12 +479,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2iq-RC-xKa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="dze-9B-1Vu" firstAttribute="top" secondItem="2iq-RC-xKa" secondAttribute="top" priority="999" constant="10" id="AYf-VO-Rkf"/>
                             <constraint firstItem="dze-9B-1Vu" firstAttribute="centerY" secondItem="TTY-NA-Zpe" secondAttribute="centerY" id="JAZ-mi-4Vn"/>
-                            <constraint firstItem="dze-9B-1Vu" firstAttribute="leading" secondItem="2iq-RC-xKa" secondAttribute="leading" constant="10" id="Row-Tv-hIG"/>
-                            <constraint firstItem="2iq-RC-xKa" firstAttribute="trailing" secondItem="dze-9B-1Vu" secondAttribute="trailing" constant="10" id="lLS-Zg-xoG"/>
+                            <constraint firstItem="dze-9B-1Vu" firstAttribute="leading" secondItem="2iq-RC-xKa" secondAttribute="leading" constant="8" id="Row-Tv-hIG"/>
+                            <constraint firstItem="2iq-RC-xKa" firstAttribute="trailing" secondItem="dze-9B-1Vu" secondAttribute="trailing" constant="8" id="lLS-Zg-xoG"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="g7x-OH-Rfq" appends="YES" id="tFb-Yf-3LH"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="jxc-dT-qBG"/>
                     <connections>
@@ -491,6 +495,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFa-13-Y85" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="g7x-OH-Rfq">
+                    <connections>
+                        <action selector="handlePanWithRecognizer:" destination="dze-9B-1Vu" id="f4p-ub-nxK"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4305.7971014492759" y="-216.29464285714286"/>
         </scene>
