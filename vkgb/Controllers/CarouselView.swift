@@ -36,6 +36,8 @@ class CarouselView: UIImageView {
     private var beginCenterXVisibleView: CGFloat = 0
     private var beginCenterXRightView: CGFloat = 0
     private var beginCenterXLeftView: CGFloat = 0
+    
+    private var scaleIndex: CGFloat = 0.75
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -54,6 +56,11 @@ class CarouselView: UIImageView {
         beginCenterXVisibleView = visibleView.center.x
         beginCenterXRightView = rightView.center.x
         beginCenterXLeftView = leftView.center.x
+        
+        rightView.transform = CGAffineTransform(scaleX: scaleIndex, y: scaleIndex)
+        leftView.transform = CGAffineTransform(scaleX: scaleIndex, y: scaleIndex)
+
+        
     }
 
     private func setViews() {
@@ -78,7 +85,6 @@ class CarouselView: UIImageView {
             rightView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             rightView.leadingAnchor.constraint(equalTo: visibleView.trailingAnchor, constant: 16),
         ])
- 
     }
 
     private func setGesture() {
@@ -117,6 +123,10 @@ class CarouselView: UIImageView {
         visibleView.center.x = visibleView.center.x + translation.x
         leftView.center.x = leftView.center.x + translation.x
         rightView.center.x = rightView.center.x + translation.x
+        
+        self.rightView.transform = CGAffineTransform(scaleX: scaleIndex, y: scaleIndex)
+        self.leftView.transform = CGAffineTransform(scaleX: scaleIndex, y: scaleIndex)
+
         
         recognizer.setTranslation(.zero, in: self.visibleView)
 
@@ -160,13 +170,17 @@ class CarouselView: UIImageView {
                 self.visibleView.center.x = self.beginCenterXVisibleView
                 self.leftView.center.x = self.beginCenterXLeftView
                 self.rightView.center.x = self.beginCenterXRightView
+                self.leftView.transform = CGAffineTransform(scaleX: self.scaleIndex, y: self.scaleIndex)
+                self.rightView.transform = CGAffineTransform(scaleX: self.scaleIndex, y: self.scaleIndex)
             case .left:
                 self.visibleView.center.x = self.beginCenterXLeftView
                 self.rightView.center.x = self.beginCenterXVisibleView
+                self.rightView.transform = CGAffineTransform(scaleX: 1, y: 1)
                 self.visibleIndex = self.nextIndex()
             case .right:
                 self.visibleView.center.x = self.beginCenterXRightView
                 self.leftView.center.x = self.beginCenterXVisibleView
+                self.leftView.transform = CGAffineTransform(scaleX: 1, y: 1)
                 self.visibleIndex = self.earlyIndex()
             }
         } completion: { _ in
