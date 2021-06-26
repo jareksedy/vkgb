@@ -442,9 +442,11 @@
                                         <constraint firstItem="Ffh-0t-YsE" firstAttribute="leading" secondItem="PVL-Bb-Eaf" secondAttribute="leading" id="t9C-NP-y7Y"/>
                                     </constraints>
                                 </collectionViewCellContentView>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <size key="customSize" width="100" height="100"/>
                                 <connections>
                                     <outlet property="friendPhotoView" destination="Ffh-0t-YsE" id="FRb-xh-kmc"/>
+                                    <segue destination="TZH-yx-10X" kind="show" id="8Pj-Wo-XDg"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -458,6 +460,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TQr-FU-Jrz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3479.7101449275365" y="-216.29464285714286"/>
+        </scene>
+        <!--Friend Carousel Photo View Controller-->
+        <scene sceneID="DTN-hT-4g6">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="TZH-yx-10X" customClass="FriendCarouselPhotoViewController" customModule="vkgb" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TTY-NA-Zpe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dze-9B-1Vu">
+                                <rect key="frame" x="10" y="224" width="394" height="394"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dze-9B-1Vu" secondAttribute="height" id="ace-kj-OQ4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2iq-RC-xKa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dze-9B-1Vu" firstAttribute="top" secondItem="2iq-RC-xKa" secondAttribute="top" priority="999" constant="10" id="AYf-VO-Rkf"/>
+                            <constraint firstItem="dze-9B-1Vu" firstAttribute="centerY" secondItem="TTY-NA-Zpe" secondAttribute="centerY" id="JAZ-mi-4Vn"/>
+                            <constraint firstItem="dze-9B-1Vu" firstAttribute="leading" secondItem="2iq-RC-xKa" secondAttribute="leading" constant="10" id="Row-Tv-hIG"/>
+                            <constraint firstItem="2iq-RC-xKa" firstAttribute="trailing" secondItem="dze-9B-1Vu" secondAttribute="trailing" constant="10" id="lLS-Zg-xoG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jxc-dT-qBG"/>
+                    <connections>
+                        <outlet property="FriendLargePhotoView" destination="dze-9B-1Vu" id="Kre-9n-txk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GFa-13-Y85" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4305.7971014492759" y="-216.29464285714286"/>
         </scene>
         <!--Animation Screen View Controller-->
         <scene sceneID="xKe-aW-RWA">
@@ -569,6 +604,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -67,4 +67,17 @@ class FriendsCollectionViewController: UICollectionViewController, UICollectionV
         
         return cell
     }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let friendCarouselPhotoViewController = segue.destination as? FriendCarouselPhotoViewController,
+              let indexCell = collectionView.indexPathsForSelectedItems?[0].row
+
+        else { return }
+        
+        friendCarouselPhotoViewController.userId = userId!
+        friendCarouselPhotoViewController.photoId = indexCell
+        
+    }
 }
