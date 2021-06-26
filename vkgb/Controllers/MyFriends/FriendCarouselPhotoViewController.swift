@@ -17,12 +17,10 @@ class FriendCarouselPhotoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if userId != nil {
-            if userPhotos[userId!].imageNames != nil {
-                FriendLargePhotoView.image = UIImage(named: userPhotos[userId!].imageNames![photoId!])
-            } else {
-                FriendLargePhotoView.image = UIImage(named: "defaultAvatar")
-            }
+        if userId != nil && userPhotos[userId!].imageNames != nil {
+            FriendLargePhotoView.image = UIImage(named: userPhotos[userId!].imageNames![photoId!])
+        } else {
+            FriendLargePhotoView.image = UIImage(named: "defaultAvatar")
         }
     }
 }
