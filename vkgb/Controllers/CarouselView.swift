@@ -37,7 +37,7 @@ class CarouselView: UIImageView {
     private var beginCenterXRightView: CGFloat = 0
     private var beginCenterXLeftView: CGFloat = 0
     
-    private var scaleIndex: CGFloat = 0.75
+    private var scaleIndex: CGFloat = 0.5
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -132,9 +132,9 @@ class CarouselView: UIImageView {
 
         if recognizer.state == .ended {
             let offset = beginCenterXVisibleView - visibleView.center.x
-            if offset > 100 {
+            if offset > 75 {
                 startAnimate(.left)
-            } else if offset < -100 {
+            } else if offset < -75 {
                 startAnimate(.right)
             } else {
                 startAnimate(.revert)
