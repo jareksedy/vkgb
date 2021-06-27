@@ -103,7 +103,6 @@ class NavigationAnimations: UINavigationController, UINavigationControllerDelega
             destination.view.frame = transitionContext.containerView.frame
             destination.view.transform = CGAffineTransform(rotationAngle: .pi/2)
             
-            
             setAnchorPoint(anchorPoint: CGPoint(x: 1, y: 0), forView: source.view)
             source.view.frame = transitionContext.containerView.frame
             
