@@ -12,8 +12,8 @@ class LoginFormController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    let login = ""
-    let password = ""
+    let login = "cthulhu"
+    let password = "fhtagn!"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +26,20 @@ class LoginFormController: UIViewController {
     
     func auth() {
         if loginTextField.text == login && passwordTextField.text == password {
-            print("success.")
+            self.performSegue(withIdentifier: "authSegue", sender: self)
+            
         } else {
-            print("failed.")
+            let authFailedAlert = UIAlertController(title: "💩\nБлин!",
+                                                    message: "Неверный логин или пароль!",
+                                                    preferredStyle: .alert)
+            
+            authFailedAlert.addAction(UIAlertAction(title: "Да и хрен с ним, впусти!",
+                                                 style: .default,
+                                                 handler: {_ in
+                                                    self.performSegue(withIdentifier: "authSegue", sender: self)
+                                                 }))
+            
+            self.present(authFailedAlert, animated: true, completion: nil)
         }
     }
     

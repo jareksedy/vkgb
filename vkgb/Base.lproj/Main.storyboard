@@ -30,7 +30,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchDown" id="qWz-uS-ouG"/>
-                                    <segue destination="5Kq-vw-69P" kind="show" id="121-aS-VJw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VKGB ver. 1.0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xd-iI-LdL">
@@ -93,6 +92,7 @@
                         <outlet property="loginButton" destination="aZa-3s-XeC" id="drv-wo-ocF"/>
                         <outlet property="loginTextField" destination="gTC-Zj-KEl" id="ey0-ng-Mla"/>
                         <outlet property="passwordTextField" destination="lSr-XW-I6g" id="qcV-sx-r1v"/>
+                        <segue destination="5Kq-vw-69P" kind="show" identifier="authSegue" id="SKi-qI-2Th"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
