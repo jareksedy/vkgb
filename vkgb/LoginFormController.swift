@@ -9,6 +9,28 @@ import UIKit
 
 class LoginFormController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    let login = ""
+    let password = ""
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        loginButton.layer.cornerRadius = 4.0
+    }
+    
+    func auth() {
+        if loginTextField.text == login && passwordTextField.text == password {
+            print("success.")
+        } else {
+            print("failed.")
+        }
+    }
     
     @IBAction func loginButton(_ sender: UIButton) {
         UIButton.animate(withDuration: 0.75,
@@ -19,7 +41,9 @@ class LoginFormController: UIViewController {
                                     animations: {
                                         self.loginButton.bounds = self.loginButton.bounds.insetBy(dx: -10, dy: -10)
                                     },
-                                    completion: nil)
+                                    completion: {_ in
+                                        self.auth()
+                                    })
     }
     
 }
