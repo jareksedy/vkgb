@@ -104,7 +104,7 @@
                     <connections>
                         <outlet property="loginButton" destination="aZa-3s-XeC" id="drv-wo-ocF"/>
                         <outlet property="loginTextField" destination="gTC-Zj-KEl" id="ey0-ng-Mla"/>
-                        <outlet property="passwordTextField" destination="lSr-XW-I6g" id="qcV-sx-r1v"/>
+                        <outlet property="passwordTextField" destination="lSr-XW-I6g" id="COW-uW-gzm"/>
                         <outlet property="scrollView" destination="rHk-qj-SHA" id="KEm-aw-2JL"/>
                         <segue destination="5Kq-vw-69P" kind="show" identifier="authSegue" id="SKi-qI-2Th"/>
                     </connections>
