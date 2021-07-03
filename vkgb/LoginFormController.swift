@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginFormController: UIViewController {
+class LoginFormController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -18,15 +18,14 @@ class LoginFormController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-        
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
+        self.loginTextField.delegate = self
+        self.passwordTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasShown), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -79,6 +78,10 @@ class LoginFormController: UIViewController {
         self.scrollView?.endEditing(true)
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
     
     @IBAction func loginButton(_ sender: UIButton) {
         UIButton.animate(withDuration: 0.75,
