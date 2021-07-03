@@ -86,7 +86,7 @@ class LoginFormController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == self.loginTextField {
-            delay(0.05){
+            delay(0.001){
                 self.passwordTextField.becomeFirstResponder()
             }
         }
