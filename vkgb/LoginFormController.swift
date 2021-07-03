@@ -22,6 +22,7 @@ class LoginFormController: UIViewController, UITextFieldDelegate {
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
         self.loginTextField.delegate = self
         self.passwordTextField.delegate = self
+        //self.passwordTextField.isSecureTextEntry = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
