@@ -9,15 +9,10 @@ import UIKit
 
 class AnimationScreenViewController: UIViewController {
     
-    func delay(_ delay:Double, closure:@escaping ()->()) {
-        let when = DispatchTime.now() + delay
-        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
-    }
-    
     @IBOutlet weak var dotView: UIView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         
         let dot1 = UIView()
         let dot2 = UIView()
@@ -50,61 +45,57 @@ class AnimationScreenViewController: UIViewController {
         dotView.addSubview(dot2)
         dotView.addSubview(dot3)
         
-        let initialDelay = 0.25
         let animationDuration = 1.0
         
-        delay(initialDelay){
-            
-            UIView.animateKeyframes(withDuration: animationDuration,
-                                    delay: 0,
-                                    options: [.autoreverse],
-                                    animations: {
-                                        UIView.addKeyframe(withRelativeStartTime: 0,
-                                                           relativeDuration: animationDuration,
-                                                           animations: {
-                                                            dot1.alpha += 0.5
-                                                            dot1.backgroundColor = UIColor.systemRed
-                                                            dot1.transform = CGAffineTransform(scaleX: 1, y: 1)
-                                                           })
-                                        UIView.addKeyframe(withRelativeStartTime: 0.20,
-                                                           relativeDuration: animationDuration,
-                                                           animations: {
-                                                            dot2.alpha += 0.5
-                                                            dot2.backgroundColor = UIColor.systemRed
-                                                            dot2.transform = CGAffineTransform(scaleX: 1, y: 1)
-                                                           })
-                                        UIView.addKeyframe(withRelativeStartTime: 0.40,
-                                                           relativeDuration: animationDuration,
-                                                           animations: {
-                                                            dot3.alpha += 0.5
-                                                            dot3.backgroundColor = UIColor.systemRed
-                                                            dot3.transform = CGAffineTransform(scaleX: 1, y: 1)
-                                                           })
-                                        UIView.addKeyframe(withRelativeStartTime: 0.60,
-                                                           relativeDuration: animationDuration,
-                                                           animations: {
-                                                            dot1.alpha -= 0.5
-                                                            dot1.backgroundColor = UIColor.systemBlue
-                                                            dot1.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-                                                           })
-                                        UIView.addKeyframe(withRelativeStartTime: 0.80,
-                                                           relativeDuration: animationDuration,
-                                                           animations: {
-                                                            dot2.alpha -= 0.5
-                                                            dot2.backgroundColor = UIColor.systemBlue
-                                                            dot2.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-                                                           })
-                                        UIView.addKeyframe(withRelativeStartTime: 1.0,
-                                                           relativeDuration: animationDuration,
-                                                           animations: {
-                                                            dot3.alpha -= 0.5
-                                                            dot3.backgroundColor = UIColor.systemBlue
-                                                            dot3.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-                                                           })
-                                    },
-                                    completion: { _ in
-                                        self.performSegue(withIdentifier: "goForth", sender: self)
-                                    })
-        }
+        UIView.animateKeyframes(withDuration: animationDuration,
+                                delay: 0,
+                                options: [.autoreverse],
+                                animations: {
+                                    UIView.addKeyframe(withRelativeStartTime: 0,
+                                                       relativeDuration: animationDuration,
+                                                       animations: {
+                                                        dot1.alpha += 0.5
+                                                        dot1.backgroundColor = UIColor.systemRed
+                                                        dot1.transform = CGAffineTransform(scaleX: 1, y: 1)
+                                                       })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.20,
+                                                       relativeDuration: animationDuration,
+                                                       animations: {
+                                                        dot2.alpha += 0.5
+                                                        dot2.backgroundColor = UIColor.systemRed
+                                                        dot2.transform = CGAffineTransform(scaleX: 1, y: 1)
+                                                       })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.40,
+                                                       relativeDuration: animationDuration,
+                                                       animations: {
+                                                        dot3.alpha += 0.5
+                                                        dot3.backgroundColor = UIColor.systemRed
+                                                        dot3.transform = CGAffineTransform(scaleX: 1, y: 1)
+                                                       })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.60,
+                                                       relativeDuration: animationDuration,
+                                                       animations: {
+                                                        dot1.alpha -= 0.5
+                                                        dot1.backgroundColor = UIColor.systemBlue
+                                                        dot1.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+                                                       })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.80,
+                                                       relativeDuration: animationDuration,
+                                                       animations: {
+                                                        dot2.alpha -= 0.5
+                                                        dot2.backgroundColor = UIColor.systemBlue
+                                                        dot2.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+                                                       })
+                                    UIView.addKeyframe(withRelativeStartTime: 1.0,
+                                                       relativeDuration: animationDuration,
+                                                       animations: {
+                                                        dot3.alpha -= 0.5
+                                                        dot3.backgroundColor = UIColor.systemBlue
+                                                        dot3.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+                                                       })
+                                },
+                                completion: { _ in
+                                    self.performSegue(withIdentifier: "goForth", sender: self)
+                                })
     }
 }

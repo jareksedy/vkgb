@@ -7,6 +7,11 @@
 
 import UIKit
 
+func delay(_ delay:Double, closure:@escaping ()->()) {
+    let when = DispatchTime.now() + delay
+    DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
+}
+
 class LoginFormController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var loginTextField: UITextField!
@@ -80,6 +85,11 @@ class LoginFormController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self.loginTextField {
+            delay(0.05){
+                self.passwordTextField.becomeFirstResponder()
+            }
+        }
         self.view.endEditing(true)
         return false
     }
@@ -89,7 +99,6 @@ class LoginFormController: UIViewController, UITextFieldDelegate {
                          delay: 0,
                          usingSpringWithDamping: 0.25,
                          initialSpringVelocity: 0.75,
-                         options: [],
                          animations: {
                             self.loginButton.bounds = self.loginButton.bounds.insetBy(dx: -20, dy: -20)
                          },
