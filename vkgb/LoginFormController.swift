@@ -62,22 +62,15 @@ class LoginFormController: UIViewController {
         }
     }
     
-    // Когда клавиатура появляется
     @objc func keyboardWasShown(notification: Notification) {
-        
-        // Получаем размер клавиатуры
         let info = notification.userInfo! as NSDictionary
         let kbSize = (info.value(forKey: UIResponder.keyboardFrameEndUserInfoKey) as! NSValue).cgRectValue.size
         let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: kbSize.height, right: 0.0)
-        
-        // Добавляем отступ внизу UIScrollView, равный размеру клавиатуры
         self.scrollView?.contentInset = contentInsets
         scrollView?.scrollIndicatorInsets = contentInsets
     }
     
-    //Когда клавиатура исчезает
     @objc func keyboardWillBeHidden(notification: Notification) {
-        // Устанавливаем отступ внизу UIScrollView, равный 0
         let contentInsets = UIEdgeInsets.zero
         scrollView?.contentInset = contentInsets
     }
@@ -92,13 +85,12 @@ class LoginFormController: UIViewController {
                          delay: 0,
                          usingSpringWithDamping: 0.25,
                          initialSpringVelocity: 0.75,
-                         options: [.allowUserInteraction],
+                         options: [],
                          animations: {
-                            self.loginButton.bounds = self.loginButton.bounds.insetBy(dx: -10, dy: -10)
+                            self.loginButton.bounds = self.loginButton.bounds.insetBy(dx: -20, dy: -20)
                          },
                          completion: {_ in
                             self.auth()
                          })
     }
-    
 }
